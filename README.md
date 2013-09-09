@@ -12,8 +12,10 @@ Usage
 The following usage instructions assumes Docker `>= 0.5.3` and your running
 user in the `docker` system group (to prevent needed `sudo` usage).
 
-Create your davmail config file. Ports here need to match the ports in the
-`Dockerfile`, or you will need to open your own ports during the `docker run`.
+Create your davmail config file, you can find a sample on the
+[davmail site](http://davmail.sourceforge.net/serversetup.html).
+Ports here need to match the ports in the `Dockerfile`, or you will need to
+open your own ports during the `docker run`.
 
     $ mkdir ~/.davmail
     $ vi ~/.davmail/davmail.properties #enter your davmail config here
