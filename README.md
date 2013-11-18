@@ -19,15 +19,17 @@ open your own ports during the `docker run`.
 
     $ mkdir ~/.davmail
     $ vi ~/.davmail/davmail.properties #enter your davmail config here
-    
+
 You can either clone this and build your own image, or use my image created
 from this Dockerfile.
 
 To use the image:
 
     $ docker pull gondoi/davmail
-    $ docker run -d -v ~/.davmail:/etc/davmail gondoi/davmail
-    
+    $ # exposing a system port is deprecated and must be done at the command
+    $ # line now as of 0.6.6
+    $ docker run -d -p 127.0.0.1:1025:1025 -p <ip>:<hostport>:<containerport> -v ~/.davmail:/etc/davmail gondoi/davmail
+
 To tweak and build your own:
 
     $ docker build .

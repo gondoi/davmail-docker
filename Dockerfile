@@ -16,11 +16,11 @@ RUN apt-get clean
 RUN rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/*
 
 #VOLUME        /etc/davmail
-EXPOSE        :1080
-EXPOSE        :1143
-EXPOSE        :1389
-EXPOSE        :1110
-EXPOSE        :1025
+EXPOSE        1080
+EXPOSE        1143
+EXPOSE        1389
+EXPOSE        1110
+EXPOSE        1025
 WORKDIR       /usr/local/davmail
 CMD           ["/etc/davmail/davmail.properties"]
 ENTRYPOINT    ["/usr/local/davmail/davmail.sh"]
